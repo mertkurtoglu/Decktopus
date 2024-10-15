@@ -42,3 +42,9 @@ Decktopus Dashboard is a presentation management system built using Node.js, Rea
 ### Testing
 npx jest tests/presentation.test.js
 npx jest --coverage
+
+
+
+
+https://github.com/user-attachments/assets/c06733f2-dee2-45ec-a94b-f89d9ae88f74
+
