@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+  background-color: #6b77a5;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Create Card Styles */
+
+.create-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.create-card i {
+  font-size: 50px;
+  color: rgb(99, 101, 216);
+  margin: 10px;
+}
+
+@media (max-width: 576px) {
+  .create-card {
+    height: 120px;
+  }
+  .create-card i {
+    font-size: 2rem;
+  }
+}
+
+/* Presentation Card Styles */
+.presentation-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.3s;
+}
+
+.presentation-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.presentation-card img {
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.presentation-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.card-text {
+  margin-bottom: 0.4rem;
+  font-size: 12px;
+  color: #888;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .presentation-card {
+    height: auto;
+  }
+}
+
+/* Navbar Circle Icon Styles */
+.circle-icon {
+  color: orange;
+  position: relative;
+}
+
+.circle-icon i {
+  font-size: 30px;
+}
+
+.icon-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Sort Button Styles */
+.sort-btn i {
+  margin-right: 5px;
+}
+
+.sort-btn {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.dropdown-item {
+  font-size: small;
+}
+
+.dropdown-ellipsis {
+  color: #000000 !important;
+  display: none !important;;
+}
+
+/* Button Styles */
+.btn-link {
+  text-decoration: none;
+}
+
+/* Modal Custom Styles */
+.modal-content {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+/* Utilities for spacing and responsiveness */
+@media (max-width: 768px) {
+  .text-md-end {
+    text-align: left !important;
+  }
+
+  .dashboard {
+    padding: 15px;
+  }
+}
+
+/* Responsive image handling */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Card hover effects */
+.dropdown-open {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+@media (max-width: 576px) {
+  .create-card .card-title,
+  .ai-text {
+    font-size: 1rem;
+  }
+
+  .create-card {
+    height: auto; /* Let the card grow with content */
+  }
+}
+
+/* Row and Column Styles */
+.my-3 > .col-md-4 {
+  padding: 10px;
+}
+
+/* Create Card Styles */
+.create-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 10px;
+}
+
+.create-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.create-card i {
+  font-size: 50px;
+  color: rgb(99, 101, 216);
+  margin: 10px;
+}
+
+/* AI Card Styles */
+.card-ai {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.card-ai i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card-create {
+  height: 120px;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.card-create i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: rgb(107, 100, 207);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .create-card {
+    height: 120px;
+  }
+  .create-card i {
+    font-size: 2rem;
+  }
+}
