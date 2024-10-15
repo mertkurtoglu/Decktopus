@@ -21,7 +21,6 @@ exports.createPresentation = async (req, res) => {
   try {
     const newPresentation = await Presentation.create({ presentation_name, created_by_name, last_updated_date, thumbnail_image });
     res.status(201).json(newPresentation);
-    console.log(newPresentation)
   } catch (err) {
     console.log(err)
     res.status(500).json({ error: err.message });

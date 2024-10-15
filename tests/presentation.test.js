@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../app'); // Adjust the path to your Express app
+const app = require('../app');
 const Presentation = require('../models/presentationModel');
 const { sequelize } = require('../models'); 
 
@@ -76,7 +76,7 @@ describe('Presentation API', () => {
 
     const response = await request(app)
       .put(`/presentations/${id}`)
-      .send({ presentation_name: 'Updated Presentation' });
+      .send({ presentation_name: 'Updated Presentation' , last_updated_date: '2024-10-15'});
 
     expect(response.status).toBe(200);
     expect(response.body).toEqual(updatedPresentation);
@@ -131,7 +131,7 @@ describe('Presentation API', () => {
 
   test('DELETE /presentations/:id should handle errors when deleting', async () => {
     const id = 1;
-    const existingPresentation = { id, thumbnail: 'thumbnail.jpg', destroy: jest.fn().mockRejectedValue(new Error('Deletion error')) };
+    const existingPresentation = { id, destroy: jest.fn().mockRejectedValue(new Error('Deletion error')) };
     Presentation.findByPk.mockResolvedValue(existingPresentation);
     
     const response = await request(app).delete(`/presentations/${id}`);

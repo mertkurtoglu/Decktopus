@@ -15,7 +15,6 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files from the 'uploads' directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-
 // Routes
 app.use('/', presentationRoutes);
 
@@ -26,8 +25,9 @@ sequelize.sync().then(() => {
   console.error('Unable to connect to the database:', err);
 });
 
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+
+module.exports = app;
